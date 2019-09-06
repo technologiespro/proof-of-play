@@ -8,3 +8,4 @@
 - storage LevelDB keys/values
 - real-time gaming events are broadcast via sockets in DAPPs
 - optional: to develop a load balancer, sharding
+- solve the problem of nat using udp through the stun
