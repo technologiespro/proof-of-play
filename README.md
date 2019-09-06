@@ -9,3 +9,53 @@
 - real-time gaming events are broadcast via sockets in DAPPs
 - optional: to develop a load balancer, sharding
 - solve the problem of nat using udp through the stun
+
+
+blockData: 0xblockHeight
+
+- prevBlockHash
+- blockHash
+- blockTime
+- generatorId: address
+- payload: [txsData]
+
+txsData:[]
+
+- txtype: bet/play (0/1)
+- txIdSTH: hash
+- gameId: hash-md5
+- amount: sth
+- timestamp: unixtime
+- senderId: address
+- recipientId: address
+- gameValue: 0/1 hash
+- senderSig: from sth
+- affiliateID: address
+--------------------------------
+- txType: result (2)
+- txIdSTH: hash
+- gameId: hash-md5
+- amountWin: sth
+- timestamp: unixTime
+- senderId: address
+- winnerId: address
+- affiliate: {
+    - accountId: address
+    - amount: sth
+}
+- playerBet: {
+    - accountId: address
+    - blockId
+    - txIndex
+    - value
+    - amount
+}
+- playerPlay: {
+    - accountId: address
+    - blockId
+    - txIndex
+    - value
+    - amount
+}
+- gameResult: 0/1
+
